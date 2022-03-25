@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "build-ts": "tsc",
     "build": "yarn run build-ts && yarn run lint",
@@ -14,8 +17,7 @@
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"yarn run watch-ts\" \"yarn run serve-debug\"",
     "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -w",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"yarn run watch-ts\" \"yarn run watch-node\"",
-    "clean": "clean"
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
   },
   "dependencies": {
     "axios": "^0.26.1",
